@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Chat | Login</title>
+  <link rel="stylesheet" href="style.css" />
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      width: 350px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      width: 100%;
+      background: #3b82f6;
+      color: white;
+      padding: 10px;
+      border: none;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Join a Chat Room</h2>
+
+    <form action="/validate" method="POST">
+      <input
+        type="text"
+        name="username"
+        required
+        placeholder="Enter Username"
+      />
+
+      <input
+        type="text"
+        name="room"
+        required
+        placeholder="Enter Room Name"
+      />
+
+      <input
+        type="password"
+        name="key"
+        required
+        placeholder="Enter Secret Key"
+      />
+
+      <button type="submit">Enter Chat</button>
+    </form>
+
+    <br />
+    <a href="create-room.html">Create New Room</a>
+  </div>
+
+</body>
+</html>

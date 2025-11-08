@@ -1,0 +1,153 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ===== MAIN LAYOUT ===== */
+body {
+  background: #0f0f0f;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+}
+
+/* ===== SIDEBAR ===== */
+.chat-sidebar {
+  width: 260px;
+  background: #1b1b1b;
+  border-right: 1px solid #2b2b2b;
+  padding: 20px;
+}
+
+.chat-sidebar h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #00e1ff;
+}
+
+#room-name {
+  margin-bottom: 20px;
+  color: #ffff55;
+  font-size: 18px;
+}
+
+#users {
+  list-style: none;
+}
+
+#users li {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: #2b2b2b;
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* ===== CHAT MAIN AREA ===== */
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== MESSAGES AREA ===== */
+.chat-messages {
+  padding: 20px;
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  background: #121212;
+}
+
+.message {
+  background: #1e1e1e;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border-left: 4px solid #00e1ff;
+}
+
+.message .meta {
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: #76dfff;
+}
+
+.message .text {
+  font-size: 15px;
+  color: #fff;
+}
+
+/* ===== MESSAGE INPUT BOX ===== */
+.chat-form-container {
+  background: #1b1b1b;
+  padding: 12px;
+  border-top: 1px solid #2b2b2b;
+}
+
+.chat-form {
+  display: flex;
+}
+
+.chat-form input {
+  width: 100%;
+  padding: 12px;
+  background: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 6px;
+  color: #fff;
+}
+
+.chat-form input:focus {
+  outline: none;
+  border-color: #00e1ff;
+}
+
+.chat-form button {
+  margin-left: 10px;
+  background: #00e1ff;
+  color: #000;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background: #00b8d8;
+}
+
+/* ===== SCROLL BAR ===== */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 6px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .chat-sidebar {
+    width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .chat-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #2b2b2b;
+  }
+
+  .chat-main {
+    height: calc(100vh - 200px);
+  }
+}
